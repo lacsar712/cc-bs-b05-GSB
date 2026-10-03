@@ -129,3 +129,127 @@ th {
   background: #fff8e1;
   color: #f57f17;
 }
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  background: #eceff1;
+  color: #1a1a1a;
+}
+
+.tabs button.active {
+  background: #1565c0;
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.stat b {
+  font-size: 1.4rem;
+}
+
+.hint {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.briefing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.briefing-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.briefing-layout .card {
+  margin-bottom: 0;
+}
+
+.briefing-list {
+  width: 280px;
+  flex-shrink: 0;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.briefing-list h3,
+.briefing-body h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.briefing-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.briefing-item:hover {
+  background: #f5f5f5;
+}
+
+.briefing-item.active {
+  border-color: #1565c0;
+  background: #e3f2fd;
+}
+
+.briefing-item-title {
+  font-weight: 600;
+}
+
+.briefing-item-meta {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.briefing-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.briefing-body pre {
+  margin: 0;
+  padding: 1rem;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  user-select: text;
+}
+
+@media (max-width: 720px) {
+  .briefing-layout {
+    flex-direction: column;
+  }
+
+  .briefing-list {
+    width: 100%;
+    max-height: 240px;
+  }
+}

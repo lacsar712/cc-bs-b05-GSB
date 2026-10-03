@@ -22,6 +22,17 @@ CREATE TABLE IF NOT EXISTS strain_readings (
     processed_at timestamptz
 );
 CREATE INDEX IF NOT EXISTS idx_strain_readings_status ON strain_readings (status, id);
+
+CREATE TABLE IF NOT EXISTS shift_briefings (
+    id serial PRIMARY KEY,
+    created_by text NOT NULL,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    pass_count integer NOT NULL,
+    fail_count integer NOT NULL,
+    pending_count integer NOT NULL,
+    recent_done jsonb NOT NULL,
+    body text NOT NULL
+);
 """
 
 
